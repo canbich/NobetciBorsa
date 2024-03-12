@@ -7,7 +7,6 @@ import AlertNavigator from './AlertNavigator';
 import UserNavigator from './UserNavigator';
 import PieChartNavigator from './PieChartNavigator';
 import { Entypo, FontAwesome5, AntDesign, Feather } from '@expo/vector-icons';
-import { Alert } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,6 +25,8 @@ function RootNavigator() {
                 }
             }}
         >
+
+
             <Tab.Screen
                 name="Home"
                 component={HomeNavigator}
