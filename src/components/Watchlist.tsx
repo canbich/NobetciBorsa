@@ -5,7 +5,7 @@ import { TouchableOpacity } from 'react-native';
 import { useNavigation, NavigationContainer } from '@react-navigation/native'; // React Navigation'ı kullanabilmek için gerekli import
 import AlertScreen from '../screens/AlertScreen';
 import { createStackNavigator } from '@react-navigation/stack';
-import SelectStockScreen from '../screens/SelectStockScreen';
+import { Link } from '@react-navigation/native';
 
 
 const Stack = createStackNavigator()
@@ -16,10 +16,6 @@ function Watchlist() {
 
     const navigation = useNavigation();
 
-    const handlePress = () => {
-       navigation.navigate('SelectStockScreen');
-    };
-
 
     return (
         
@@ -28,8 +24,10 @@ function Watchlist() {
         <View style={styles.watchlistContainer}>
             <View style={styles.watchlistBar}>
                 <Text style={styles.barText}>Takip Listem</Text>
-                <TouchableOpacity onPress={handlePress}>
-                    <AntDesign name="pluscircleo" size={24} color="#33D49D" />
+                <TouchableOpacity >
+                    <Link  to={{ screen: 'ismail' }}>
+                        <AntDesign name="pluscircleo" size={24} color="#33D49D" />
+                    </Link>
                 </TouchableOpacity>
             </View>
             <View style={styles.watchlistStocks}>

@@ -1,12 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import RootNavigator from './src/navigators/RootNavigator';
 import 'react-native-gesture-handler'
+import RouteNav from './src/navigators/RouteNav';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <RootNavigator/>
+      <RouteNav/>
     </NavigationContainer>
   );
 }
